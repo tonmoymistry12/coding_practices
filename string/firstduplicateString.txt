@@ -1,0 +1,11 @@
+//some() method tests whether at least one element in the array passes the test
+let str='position';
+let firstElem;
+str = str.split('');//['p','o','s','i','t','i','o','n']
+str.some((x,pos)=>{ 
+   if((str.filter((j,pos)=>j==x).length > 1)){
+    	firstElem=pos;
+    	return true;
+    }
+})
+console.log(str[firstElem]);
